@@ -158,7 +158,58 @@ def cybermansolve(board):
 			
 		else:
 			break
+	
+class Position():
+	def init(self,board,position): #position like (x,y)
+		possibles= [1,2,3,4,5,6,7,8,9]
+		self.board = board
+		self.pos = position
+		self.box=[]
+		for liness in self.board:
+			if position[0] in [0,1,2]:
+				if position[1] in [0,1,2]:
+					self.box = [board[0][:3],board[1][:3],board[2][:3]]	
+				elif position[1] in [3,4,5]:
+					self.box = [board[0][3:6],board[1][3:6],board[2][3:6]]
+				elif position[1] in [6,7,8]:
+					self.box = [board[0][6:],board[1][6:],board[2][6:]]
+				else:
+					raise SystemExit
+			elif position[0] in [3,4,5]:
+				if position[1] in [0,1,2]:
+					self.box = [board[3][:3],board[4][:3],board[5][:3]]	
+				elif position[1] in [3,4,5]:
+					self.box = [board[3][3:6],board[4][3:6],board[5][3:6]]
+				elif position[1] in [6,7,8]:
+					self.box = [board[3][6:],board[4][6:],board[5][6:]]
+				else:
+					raise SystemExit
+			elif  position[0] in [6,7,8]:
+				if position[1] in [0,1,2]:
+					self.box = [board[6][:3],board[7][:3],board[8][:3]]
+				elif position[1] in [3,4,5]:
+					self.box = [board[6][3:6],board[7][3:6],board[8][3:6]]
+				elif position[1] in [6,7,8]:
+					self.box = [board[6][6:],board[7][6:],board[8][6:]]
+				else:
+					raise SystemExit
+			else:
+				print "There was an error"
+				raise SystemExit 
+		if position[0] and position[1] <3:
+			self.box= [board[0][:3],board[1][:3],board[2][:3]]
+		elif position[0] and position[1] <6:
+			self.box= [board[0][3:6],board[1][3:6],board[2][3:6]]
+		else:
+			self.box= [board[0][:3],board[1][:3],board[2][:3]]
+		self.row= board[self.board[0]]
+		self.line= []
+		for lines in self.board:
+			(self.line).append(lines[position[1]])
 		
+		
+		
+
 
 	
 def daleksolve(board):
