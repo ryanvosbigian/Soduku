@@ -164,6 +164,7 @@ class Position():
 		possibles= [1,2,3,4,5,6,7,8,9]
 		self.board = board
 		self.pos = position
+		self.row= board[position[0]]
 		self.box=[]
 		for liness in self.board:
 			if position[0] in [0,1,2]:
@@ -196,24 +197,24 @@ class Position():
 			else:
 				print "There was an error"
 				raise SystemExit 
-		if position[0] and position[1] <3:
-			self.box= [board[0][:3],board[1][:3],board[2][:3]]
-		elif position[0] and position[1] <6:
-			self.box= [board[0][3:6],board[1][3:6],board[2][3:6]]
-		else:
-			self.box= [board[0][:3],board[1][:3],board[2][:3]]
-		self.row= board[self.board[0]]
 		self.line= []
 		for lines in self.board:
 			(self.line).append(lines[position[1]])
-		
+		for numbers in possibles:
+			if numbers in self.line or self.row or self.box:
+				possibles.remove(numbers)
+		if len(possibles) == 1:
+			return [self.board[position[0]][position[1]], True]
+		else:
+			return [possibles, False]
 		
 		
 
 
 	
 def daleksolve(board):
-	def composs(board,pos): #compute possibilities. (board, position (string... "xy" example 10))
+	Position.add(board)
+	def composs(board,pos): #compute possibilities. (board, position (string... "xy" example "10)")
 		print board
 		possnum = ["2","1"]
 		currentline= board[int(pos[0])]
