@@ -297,24 +297,107 @@ def daleksolve(board):
 	P86= Position()
 	P87= Position()
 	P88= Position()
+	##########################RUNING IT PART STARTS############################################################################
 	
-	if P00[1] or P01[1] or P02[1] or P03[1] or P04[1] or P05[1] or P06[1] or P07[1] or P08[1] == True:
+	p00= P00.init(board,[0,0])
+	p01= P01.init(board,[0,1])
+	p02= P02.init(board,[0,2])
+	p03= P03.init(board,[0,3])
+	p04= P04.init(board,[0,4])
+	p05= P05.init(board,[0,5])
+	p06= P06.init(board,[0,6])
+	p07= P07.init(board,[0,7])
+	p08= P08.init(board,[0,8])
+	p10= P10.init(board,[1,0])
+	p11= P11.init(board,[1,1])
+	p12= P12.init(board,[1,2])
+	p13= P13.init(board,[1,3])
+	p14= P14.init(board,[1,4])
+	p15= P15.init(board,[1,5])
+	p16= P16.init(board,[1,6])
+	p17= P17.init(board,[1,7])
+	p18= P18.init(board,[1,8])
+	p20= P20.init(board,[2,0])
+	p21= P21.init(board,[2,1])
+	p22= P22.init(board,[2,2])
+	p23= P23.init(board,[2,3])
+	p24= P24.init(board,[2,4])
+	p25= P25.init(board,[2,5])
+	p26= P06.init(board,[2,6])
+	p27= P27.init(board,[2,7])
+	p28= P28.init(board,[2,8])
+	p30= P30.init(board,[3,0])
+	p31= P31.init(board,[3,1])
+	p32= P32.init(board,[3,2])
+	p33= P33.init(board,[3,3])
+	p34= P34.init(board,[3,4])
+	p35= P35.init(board,[3,5])
+	p36= P36.init(board,[3,6])
+	p37= P37.init(board,[3,7])
+	p38= P38.init(board,[3,8])
+	p40= P40.init(board,[4,0])
+	p41= P41.init(board,[4,1])
+	p42= P42.init(board,[4,2])
+	p43= P43.init(board,[4,3])
+	p44= P44.init(board,[4,4])
+	p45= P45.init(board,[4,5])
+	p46= P46.init(board,[4,6])
+	p47= P47.init(board,[4,7])
+	p48= P48.init(board,[4,8])
+	p50= P50.init(board,[5,0])
+	p51= P51.init(board,[5,1])
+	p52= P52.init(board,[5,2])
+	p53= P53.init(board,[5,3])
+	p54= P54.init(board,[5,4])
+	p55= P55.init(board,[5,5])
+	p56= P56.init(board,[5,6])
+	p57= P57.init(board,[5,7])
+	p58= P58.init(board,[5,8])
+	p60= P60.init(board,[6,0])
+	p61= P61.init(board,[6,1])
+	p62= P62.init(board,[6,2])
+	p63= P63.init(board,[6,3])
+	p64= P64.init(board,[6,4])
+	p65= P65.init(board,[6,5])
+	p66= P66.init(board,[6,6])
+	p67= P67.init(board,[6,7])
+	p68= P68.init(board,[6,8])
+	p70= P70.init(board,[7,0])
+	p71= P71.init(board,[7,1])
+	p72= P72.init(board,[7,2])
+	p73= P73.init(board,[7,3])
+	p74= P74.init(board,[7,4])
+	p75= P75.init(board,[7,5])
+	p76= P76.init(board,[7,6])
+	p77= P77.init(board,[7,7])
+	p79= P78.init(board,[7,8])
+	p80= P80.init(board,[8,0])
+	p81= P81.init(board,[8,1])
+	p82= P82.init(board,[8,2])
+	p83= P83.init(board,[8,3])
+	p84= P84.init(board,[8,4])
+	p85= P85.init(board,[8,5])
+	p86= P86.init(board,[8,6])
+	p87= P87.init(board,[8,7])
+	p88= P88.init(board,[8,8])
+	##########################NOW IT ENDS##################################################################################
+	if p00[1] or p01[1] or p02[1] or p03[1] or p04[1] or p05[1] or p06[1] or p07[1] or p08[1] == True:
 		daleksolve(board)
-	if P10[1] or P11[1] or P12[1] or P13[1] or P14[1] or P15[1] or P16[1] or P17[1] or P18[1] == True:
+	if p10[1] or p11[1] or p12[1] or p13[1] or p14[1] or p15[1] or p16[1] or p17[1] or p18[1] == True:
 		daleksolve(board)
-	if P20[1] or P21[1] or P22[1] or P23[1] or P24[1] or P25[1] or P26[1] or P27[1] or P28[1] == True:
+	if p20[1] or p21[1] or p22[1] or p23[1] or p24[1] or p25[1] or p26[1] or p27[1] or p28[1] == True:
 		daleksolve(board)
-	if P30[1] or P31[1] or P32[1] or P33[1] or P34[1] or P35[1] or P36[1] or P37[1] or P38[1] == True:
+	if p30[1] or p31[1] or p32[1] or p33[1] or p34[1] or p35[1] or p36[1] or p37[1] or p38[1] == True:
 		daleksolve(board)
-	if P40[1] or P41[1] or P42[1] or P43[1] or P44[1] or P45[1] or P46[1] or P47[1] or P48[1] == True:
+	if p40[1] or p41[1] or p42[1] or p43[1] or p44[1] or p45[1] or p46[1] or p47[1] or p48[1] == True:
 		daleksolve(board)
-	if P50[1] or P51[1] or P52[1] or P53[1] or P54[1] or P55[1] or P56[1] or P57[1] or P58[1] == True:
+	if p50[1] or p51[1] or p52[1] or p53[1] or p54[1] or p55[1] or p56[1] or p57[1] or p58[1] == True:
 		daleksolve(board)
-	if P60[1] or P61[1] or P62[1] or P63[1] or P64[1] or P65[1] or P66[1] or P67[1] or P68[1] == True:
+	if p60[1] or p61[1] or p62[1] or p63[1] or p64[1] or p65[1] or p66[1] or p67[1] or p68[1] == True:
 		daleksolve(board)
-	if P70[1] or P71[1] or P72[1] or P73[1] or P74[1] or P75[1] or P76[1] or P77[1] or P78[1] == True:
+	if p70[1] or p71[1] or p72[1] or p73[1] or p74[1] or p75[1] or p76[1] or p77[1] or p78[1] == True:
 		daleksolve(board)
-	if P80[1] or P81[1] or P82[1] or P83[1] or P84[1] or P85[1] or P86[1] or P87[1] or P88[1] == True:
+	if p80[1] or p81[1] or p82[1] or p83[1] or p84[1] or p85[1] or p86[1] or p87[1] or p88[1] == True:
 		daleksolve(board)
 	
 	print board
