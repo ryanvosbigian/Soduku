@@ -216,7 +216,14 @@ class Position():
 
 	
 def daleksolve(board):
-	P00= Position()
+	X,Y = 0,0
+	
+	for repeat in range(81):
+		exec "P"+ str(X) + str(Y)+ "= Position()"
+		if Y == 8: Y = 0
+		else: Y+=1
+		X+=1
+	"""P00= Position()
 	P01= Position()
 	P02= Position()
 	P03= Position()
@@ -296,10 +303,15 @@ def daleksolve(board):
 	P85= Position()
 	P86= Position()
 	P87= Position()
-	P88= Position()
+	P88= Position()"""
 	##########################RUNING IT PART STARTS############################################################################
-	
-	p00= P00.init(board,[0,0])
+	x,y = 0,0
+	for repeats in range(81):
+		exec "p" + x + y + "= P" + x + y + ".init(board,[" + x + "," + y + "])"
+		if y = 8: y = 0
+		else: y+=1
+		x += 1
+	"""p00= P00.init(board,[0,0])
 	p01= P01.init(board,[0,1])
 	p02= P02.init(board,[0,2])
 	p03= P03.init(board,[0,3])
@@ -379,7 +391,7 @@ def daleksolve(board):
 	p85= P85.init(board,[8,5])
 	p86= P86.init(board,[8,6])
 	p87= P87.init(board,[8,7])
-	p88= P88.init(board,[8,8])
+	p88= P88.init(board,[8,8])"""
 	##########################NOW IT ENDS##################################################################################
 	if p00[1] or p01[1] or p02[1] or p03[1] or p04[1] or p05[1] or p06[1] or p07[1] or p08[1] == True:
 		daleksolve(board)
